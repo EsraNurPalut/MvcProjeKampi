@@ -26,5 +26,9 @@ namespace MvcProjeKampi.Controllers
 
             return View();
         }
+        public ActionResult Test() //metot tanımladık
+        {
+            return View();
+        }
     }
 }
