@@ -9,6 +9,7 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int HeadingID { get; set; } // veri tabanına yansıyacak sütun başlıkları
+
         [StringLength(50)]
         public string HeadingName { get; set; }
 
