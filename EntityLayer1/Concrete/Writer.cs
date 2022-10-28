@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.Concrete
+namespace EntityLayer1.Concrete
 {
    public  class Writer
     {
@@ -24,13 +24,10 @@ namespace EntityLayer.Concrete
         [StringLength(50)]
         public string WriterMail { get; set; }
 
-        [StringLength(200)]
+        [StringLength(20)]
         public string WriterPassword { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
-        //public ICollection<Content> Content { get; set; }
-
-
-
+        public ICollection<Content> Contents { get; set; }
     }
 }

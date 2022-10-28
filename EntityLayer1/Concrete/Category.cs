@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.Concrete
+namespace EntityLayer1.Concrete
 {
-   public  class Category
+    public class Category
     {
         [Key]
         public int CategoryID { get; set; }
@@ -17,10 +17,9 @@ namespace EntityLayer.Concrete
 
         [StringLength(200)]
         public string CategoryDescription { get; set; }
-       
+
         public bool CategoryStatus { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
-
     }
 }

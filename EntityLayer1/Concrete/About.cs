@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.Concrete
+namespace EntityLayer1.Concrete
 {
     public class About
     {
-
         [Key]
         public int AboutID { get; set; }
 
@@ -24,7 +23,5 @@ namespace EntityLayer.Concrete
 
         [StringLength(100)]
         public string AboutImage2 { get; set; }
-
-
     }
 }

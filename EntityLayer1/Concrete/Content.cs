@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.Concrete
+namespace EntityLayer1.Concrete
 {
     public class Content
     {
@@ -20,10 +20,8 @@ namespace EntityLayer.Concrete
         public int HeadingID { get; set; }
         public virtual Heading Heading { get; set; }
 
-        //public int WriterID { get; set; }
-        //public virtual Writer Writer { get; set; }
-
-
+        public int WriterID { get; set; }
+        public virtual Writer Writer { get; set; }
 
 
     }
