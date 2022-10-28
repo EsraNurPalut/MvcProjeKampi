@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.Abstract;
@@ -31,6 +32,11 @@ namespace DataAccessLayer.Concrete.Repositories
         public List<Category> List()
         {
             return _object.ToList();
+        }
+
+        public List<Category> List(Expression<Func<Category, bool>> filter)  //sartlı listele için
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Category p)
