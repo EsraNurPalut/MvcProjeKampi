@@ -14,29 +14,15 @@ namespace BusinessLayer1.Concrete
     {
         ICategoryDal _categorydal;
 
-        // GenericRepository<Category> repo = new GenericRepository<Category>();
+        public CategoryManager(ICategoryDal categorydal)
+        {
+            _categorydal = categorydal;
+        }
 
-        //public List<Category> GetAllBL()
-        //{
 
-        //    return repo.List();
-        //}
-
-        //public void CategoryAddBL(Category p)
-        //{
-        //    if (p.CategoryName == " " || p.CategoryName.Length <= 3 || p.CategoryDescription == "" || p.CategoryName.Length >= 51) 
-        //    {
-        //        //hata mesajı
-
-        //    }
-        //    else {
-        //        repo.Insert(p);
-
-        //    }
-        //}
         public List<Category> GetList()
         {
-            return 
+            return _categorydal.List();
         }
     }
 }
