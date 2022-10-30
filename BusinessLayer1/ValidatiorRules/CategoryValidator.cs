@@ -8,9 +8,9 @@ using FluentValidation;
 
 namespace BusinessLayer1.ValidationRules
 {
-   public  class CategoryValidatior:AbstractValidator<Category>
+   public  class CategoryValidator:AbstractValidator<Category>
     {
-        public CategoryValidatior()
+        public CategoryValidator()
         {
             RuleFor(x => x.CategoryName).NotEmpty().WithMessage("Kategori adını boş geçemezsin.");
 
