@@ -24,5 +24,10 @@ namespace BusinessLayer1.Concrete
         {
             return _categorydal.List();
         }
+
+        //public void CategoryAddBL(Category p)
+        //{
+        //    if(p.CategoryName=="" || p.CategoryStatus==false || p.CategoryName.Length)
+        //}
     }
 }
