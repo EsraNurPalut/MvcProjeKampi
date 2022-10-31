@@ -46,7 +46,7 @@ namespace MvcProjeKampi.Controllers
             // ValidationResult categoryvali sınıfında(p) olan değerlere göre validasyon yap.
             if (results.IsValid)
             {
-                cm.CategoryAddBL(p); //
+                cm.CategoryAdd(p); 
                 return RedirectToAction("GetCategoryList"); //eger dogruysa getcatlis. yönlendir.
 
             }
