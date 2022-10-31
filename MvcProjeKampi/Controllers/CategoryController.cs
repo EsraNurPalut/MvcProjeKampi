@@ -4,8 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BusinessLayer1.Concrete;
+using BusinessLayer1.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer1.Concrete;
+using FluentValidation.Results;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -37,8 +39,27 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-           // cm.CategoryAddBL(p);
-            return RedirectToAction("GetCategoryList");
+            // cm.CategoryAddBL(p);
+            CategoryValidator categoryValidator = new CategoryValidator(); //validator ürettik,
+            ValidationResult results = categoryValidator.Validate(p);
+            //result isminde bir tane degişken olusturduk bu değişkenin türü
+            // ValidationResult categoryvali sınıfında(p) olan değerlere göre validasyon yap.
+            if (results.IsValid)
+            {
+                cm.CategoryAddBL(p); //
+                return RedirectToAction("GetCategoryList"); //eger dogruysa getcatlis. yönlendir.
+
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+
+            }
+
+            return View();
         }
     }
 }
