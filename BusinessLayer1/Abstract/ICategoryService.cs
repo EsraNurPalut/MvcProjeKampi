@@ -11,7 +11,8 @@ namespace BusinessLayer1.Abstract
     {
         List<Category> GetList();
         void CategoryAdd(Category category); //ekle
-        Category GetByID(int id); 
+        Category GetByID(int id);
+        void CategoryDelete(Category category);
 
     }
 }
