@@ -10,6 +10,8 @@ namespace BusinessLayer1.Abstract
    public  interface ICategoryService
     {
         List<Category> GetList();
-        void CategoryAdd(Category category);
+        void CategoryAdd(Category category); //ekle
+        Category GetByID(int id); 
+
     }
 }
