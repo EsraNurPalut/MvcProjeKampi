@@ -13,6 +13,8 @@ namespace BusinessLayer1.Abstract
         void CategoryAdd(Category category); //ekle
         Category GetByID(int id);
         void CategoryDelete(Category category);
+        void CategoryUpdate(Category category);
+     
 
     }
 }
