@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer1.Concrete
 {
-   public  class Writer
+   public class Writer
     {
         [Key]
         public int WriterID { get; set; }
@@ -36,7 +36,7 @@ namespace EntityLayer1.Concrete
         public string WriterTitle { get; set; }
 
 
-        //public ICollection<Heading> Headings { get; set; }
+        public ICollection<Heading> Headings { get; set; }
         public ICollection<Content> Contents { get; set; }
     }
 }

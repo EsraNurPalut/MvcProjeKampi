@@ -23,18 +23,21 @@ namespace MvcProjeKampi.Controllers
             return View(headingvalues);
         }
         [HttpGet]
-        public ActionResult  AddHeading()
+        public ActionResult AddHeading()
         {
             List<SelectListItem> valuecategory = (from x in cm.GetList()
-                        select new SelectListItem {
-                            Text=x.CategoryName,
-                            Value=x.CategoryID.ToString() }).ToList();
+                                                  select new SelectListItem {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+                                                  }).ToList();
 
             List<SelectListItem> valuewriter = (from x in wm.GetList()
-            select new SelectListItem {Text = x.WriterName + " " + x.WriterSurName, Value = x.WriterID.ToString()
-                                                  }).ToList();
-            ViewBag.vlc = valuecategory;
-            ViewBag.vlc = valuewriter;
+                                                select new SelectListItem {
+                                                    Text = x.WriterName + " " + x.WriterSurName,
+                                                    Value = x.WriterID.ToString()
+                                                }).ToList();
+            ViewBag.vlc = valuecategory; //vlc : sondaki c category için yazılmış bir c harfi
+            ViewBag.vlw = valuewriter; //vlw: sondaki w writer için yazılmış bir w harfi
             return View();
         }
 

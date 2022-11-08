@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer1.Concrete
 {
-    public class Category
+    public class Category 
     {
         [Key]
         public int CategoryID { get; set; }
