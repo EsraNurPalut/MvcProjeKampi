@@ -44,7 +44,7 @@ namespace BusinessLayer1.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Content> GetListByID(int id)
+        public List<Content> GetListByHeadingID(int id)
         {
             return _contentDal.List(x => x.HeadingID == id); //dısarıdan girdiğim id ye göre listeleme yapacak
         }
