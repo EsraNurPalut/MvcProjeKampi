@@ -15,6 +15,7 @@ namespace MvcProjeKampi.Controllers
         HeadingManager hm = new HeadingManager(new EFHeadingDal());
 
         CategoryManager cm = new CategoryManager(new EFCategoryDal());
+
         WriterManager wm = new WriterManager(new EFWriterDal());
 
         public ActionResult Index()
@@ -49,10 +50,10 @@ namespace MvcProjeKampi.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult  ContentByHeading()
-        {
-            return View();
-        }
+        //public ActionResult  ContentByHeading()
+        //{
+        //    return View();
+        //}
 
     }
 }

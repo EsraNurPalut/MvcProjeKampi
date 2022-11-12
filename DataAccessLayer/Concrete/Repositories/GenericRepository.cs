@@ -48,15 +48,15 @@ namespace DataAccessLayer.Concrete.Repositories
             return _object.ToList();
         }
 
-        public List<T> List(Expression<Func<T, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
         //public List<T> List(Expression<Func<T, bool>> filter)
         //{
-        //    return _object.Where(filter).ToList();
+        //    throw new NotImplementedException();
         //}
+
+        public List<T> List(Expression<Func<T, bool>> filter)
+        {
+            return _object.Where(filter).ToList();
+        }
 
         public void Update(T p)
         {
