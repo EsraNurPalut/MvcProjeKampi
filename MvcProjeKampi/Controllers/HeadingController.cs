@@ -50,10 +50,42 @@ namespace MvcProjeKampi.Controllers
             return RedirectToAction("Index");
         }
 
-        //public ActionResult  ContentByHeading()
-        //{
-        //    return View();
-        //}
 
-    }
+        [HttpGet]
+        public ActionResult EditHeading(int id) //düzenle kısmının web sayfası 
+        {
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+                                                  }).ToList(); // categoryıd değişebilir.
+            ViewBag.vlc = valuecategory; //vlc : sondaki c category için yazılmış bir c harfi
+
+            var HeadingValue = hm.GetByID(id); //baslık değeri id göre getir
+
+            return View(HeadingValue);
+        }
+        [HttpPost] //güncelle butonuna bastıgında calışacak.
+        public ActionResult EditHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = hm.GetByID(id);
+            HeadingValue.HeadingStatus = false;
+            hm.HeadingDelete(HeadingValue);
+            return RedirectToAction("Index");
+
+        }
+
+
+
+
+
+
+
+        }
 }

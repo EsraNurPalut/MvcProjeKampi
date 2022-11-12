@@ -20,6 +20,8 @@ namespace EntityLayer1.Concrete
         
         public int? CategoryID { get; set; }
 
+        public bool HeadingStatus { get; set; }
+
         [ForeignKey("CategoryID")]
         public virtual Category Category { get; set; }
 
