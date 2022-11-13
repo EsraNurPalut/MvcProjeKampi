@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BusinessLayer1.Concrete;
+using BusinessLayer1.ValidatiorRules;
+using DataAccessLayer.EntityFramework;
 
 namespace MvcProjeKampi.Controllers
 {
     public class ContactController : Controller
     {
-        // GET: Contact
+        ContactManager cm = new ContactManager(new EFContactDal());
+
+        ContactValidator cv = new ContactValidator();
+
         public ActionResult Index()
         {
-            return View();
+            var contactvalues = cm.GetList();
+            return View(contactvalues);
         }
     }
 }
