@@ -20,5 +20,10 @@ namespace MvcProjeKampi.Controllers
             var contactvalues = cm.GetList();
             return View(contactvalues);
         }
+
+        public ActionResult GetContactDetails(int id)
+        {
+            return View();
+        }
     }
 }
