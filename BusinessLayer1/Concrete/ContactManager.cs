@@ -42,6 +42,7 @@ namespace BusinessLayer1.Concrete
         public Contact GetByID(int id)
         {
             return _contactDal.Get(x=>x.ContactID==id);
+
         }
 
         public List<Contact> GetList()
