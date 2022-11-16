@@ -94,6 +94,10 @@
     <Compile Include="Migrations\202211141849014_mig_addmessageclass.designer.cs">
       <DependentUpon>202211141849014_mig_addmessageclass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211161341223_contact_adddate.cs" />
+    <Compile Include="Migrations\202211161341223_contact_adddate.designer.cs">
+      <DependentUpon>202211161341223_contact_adddate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211141849014_mig_addmessageclass.resx">
       <DependentUpon>202211141849014_mig_addmessageclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211161341223_contact_adddate.resx">
+      <DependentUpon>202211161341223_contact_adddate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
