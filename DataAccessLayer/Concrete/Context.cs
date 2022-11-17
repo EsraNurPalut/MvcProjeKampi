@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EntityLayer1;
 using EntityLayer1.Concrete;
 
 namespace DataAccessLayer.Concrete
@@ -17,6 +18,8 @@ namespace DataAccessLayer.Concrete
         public DbSet<Heading> Headings { get; set; }
         public DbSet<Writer> Writers { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<İmageFile> İmageFiles { get; set; }
+
 
     }
 }

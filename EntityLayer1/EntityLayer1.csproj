@@ -59,6 +59,7 @@
     <Compile Include="Concrete\Message.cs" />
     <Compile Include="Concrete\Writer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="İmageFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

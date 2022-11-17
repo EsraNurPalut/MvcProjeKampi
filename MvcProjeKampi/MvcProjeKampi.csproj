@@ -317,6 +317,11 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\Images\20121014183113-b7c44b19-me.jpg" />
+    <Content Include="AdminLTE-3.0.4\Images\20121014183654-25f60e98-me.jpg" />
+    <Content Include="AdminLTE-3.0.4\Images\depositphotos_1201293-stock-photo-autumn-landscape.jpg" />
+    <Content Include="AdminLTE-3.0.4\Images\indir.jpg" />
+    <Content Include="AdminLTE-3.0.4\Images\tree-99852__340.jpg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
