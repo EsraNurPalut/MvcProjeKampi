@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BusinessLayer1.Concrete;
+using DataAccessLayer.EntityFramework;
 
 namespace MvcProjeKampi.Controllers
 {
     public class GalleryController : Controller
     {
         // GET: Gallery
+        ImageFileManager ifm = new ImageFileManager(new EFImageFileDal());
+
         public ActionResult Index()
         {
-            return View();
+            var files = ifm.GetList();
+            return View(files);
         }
     }
 }
