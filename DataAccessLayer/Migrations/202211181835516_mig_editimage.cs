@@ -3,9 +3,14 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class mig_İmageFileAdd : DbMigration
+    public partial class mig_editimage : DbMigration
     {
         public override void Up()
+        {
+            DropTable("dbo.İmageFile");
+        }
+        
+        public override void Down()
         {
             CreateTable(
                 "dbo.İmageFile",
@@ -17,11 +22,6 @@
                     })
                 .PrimaryKey(t => t.ImageID);
             
-        }
-        
-        public override void Down()
-        {
-            DropTable("dbo.İmageFile");
         }
     }
 }

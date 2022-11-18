@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLayer1.Abstract;
 using DataAccessLayer.Abstract;
-using EntityLayer1;
 using EntityLayer1.Concrete;
 
 namespace BusinessLayer1.Concrete
 {
-    public class ImageFileManager : IImageFileService
+    public class ImageFileManager:IImageFileService
     {
         IImageFileDal _imagefileDal;
 
@@ -19,14 +18,9 @@ namespace BusinessLayer1.Concrete
             _imagefileDal = imagefileDal;
         }
 
-        public List<İmageFile> GetList()
+        public List<ImageFile> GetList()
         {
-            return _imagefileDal.List();
+           return  _imagefileDal.List();
         }
-
-        //List<İmageFile> IImageFileService.GetList()
-        //{
-        //    return _imagefileDal.List();
-        //}
     }
 }

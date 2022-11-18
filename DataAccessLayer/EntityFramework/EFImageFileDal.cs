@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete.Repositories;
-using EntityLayer1;
 using EntityLayer1.Concrete;
 
 namespace DataAccessLayer.EntityFramework
 {
-   public  class EFImageFileDal:GenericRepository<İmageFile>,IImageFileDal
+  public  class EFImageFileDal:GenericRepository<ImageFile>,IImageFileDal
     {
     }
 }

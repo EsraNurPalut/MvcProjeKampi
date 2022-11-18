@@ -7,7 +7,8 @@ using EntityLayer1.Concrete;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IImageFileDal:IRepository<İmageFile>
+   public interface IImageFileDal:IRepository<ImageFile>
     {
+
     }
 }
