@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using DataAccessLayer.Concrete;
 using EntityLayer1.Concrete;
+using System.Web.Security;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -24,6 +25,10 @@ namespace MvcProjeKampi.Controllers
             var adminuserinfo = c.Admins.FirstOrDefault(x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
             if(adminuserinfo!=null) 
             {
+                FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName,false);
+                Session["AdminUserName"] = adminuserinfo.AdminUserName;
+
+
                 return RedirectToAction("Index", "AdminCategory");
             }
             else
