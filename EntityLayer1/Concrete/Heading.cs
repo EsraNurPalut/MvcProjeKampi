@@ -18,15 +18,15 @@ namespace EntityLayer1.Concrete
 
         public DateTime HeadingDate { get; set; }
         
-        public int? CategoryID { get; set; }
+        public int CategoryID { get; set; }
 
         public bool HeadingStatus { get; set; }
 
-        [ForeignKey("CategoryID")]
+
         public virtual Category Category { get; set; }
 
-        public int? WriterID { get; set; }
-        [ForeignKey("WriterID")]
+        public int WriterID { get; set; }
+
         public virtual Writer Writer { get; set; }
 
         public ICollection<Content> Contents { get; set; }

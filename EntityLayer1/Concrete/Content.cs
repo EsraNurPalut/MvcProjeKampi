@@ -20,7 +20,7 @@ namespace EntityLayer1.Concrete
 
         public bool ContentStatus { get; set; } //aktif pasif işlemi için
 
-        public int? HeadingID { get; set; }
+        public int HeadingID { get; set; }
         public virtual Heading Heading { get; set; }
 
         public int? WriterID { get; set; }

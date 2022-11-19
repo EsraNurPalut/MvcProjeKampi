@@ -112,6 +112,10 @@
     <Compile Include="Migrations\202211191124429_mig_admin_table.designer.cs">
       <DependentUpon>202211191124429_mig_admin_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211191842060_mig_editwriter.cs" />
+    <Compile Include="Migrations\202211191842060_mig_editwriter.designer.cs">
+      <DependentUpon>202211191842060_mig_editwriter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211191124429_mig_admin_table.resx">
       <DependentUpon>202211191124429_mig_admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211191842060_mig_editwriter.resx">
+      <DependentUpon>202211191842060_mig_editwriter.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
