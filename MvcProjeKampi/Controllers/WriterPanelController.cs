@@ -21,7 +21,6 @@ namespace MvcProjeKampi.Controllers
             return View();
         }
 
-        [AllowAnonymous]
         public ActionResult MyHeading()
         {
            
@@ -37,7 +36,7 @@ namespace MvcProjeKampi.Controllers
                                                       Text = x.CategoryName,
                                                       Value = x.CategoryID.ToString()
                                                   }).ToList();
-
+            ViewBag.vlc = valuecategory;
             return View();
         }
 
@@ -47,9 +46,14 @@ namespace MvcProjeKampi.Controllers
         {
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.WriterID = 2;
+            p.HeadingStatus = true;
             hm.HeadingAdd(p);
-            return RedirectToAction("Index");
-            return View();
+            return RedirectToAction("MyHeading");
         }
     }
 }
+
+//<customErrors mode="On">
+         // < error statusCode = "404" redirect = "/ErorPage/Page404/" />
+   
+         //</ customErrors >
