@@ -33,11 +33,9 @@ namespace MvcProjeKampi.Controllers
             }
             else
             {
-                return RedirectToAction("Index");
-               
+                return RedirectToAction("Index");   
 
             }
-
             return View();
         }
     }

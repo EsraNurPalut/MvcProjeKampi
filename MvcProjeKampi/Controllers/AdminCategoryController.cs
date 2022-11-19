@@ -15,7 +15,7 @@ namespace MvcProjeKampi.Controllers
     {
         CategoryManager cm = new CategoryManager(new EFCategoryDal());
 
-        [Authorize]
+        [Authorize(Roles="A")] //Sadece A rolune sahip kişiler bu sayfayı görsün.
         public ActionResult Index()
         {
             var categoryvalues = cm.GetList();
