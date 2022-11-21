@@ -64,6 +64,7 @@ namespace MvcProjeKampi.Controllers
             ValidationResult result = messagevalidator.Validate(p);
             if (result.IsValid)  //sonuclar dogru ise
             {
+                p.SenderMail = "gizem@gmail.com";
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 mm.MessageAdd(p);
                 return RedirectToAction("Sendbox");
