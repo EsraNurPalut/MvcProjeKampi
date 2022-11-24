@@ -31,7 +31,7 @@
                     <div class="login-wrap p-0">
                         <h3 class="mb-4 text-center">Bir hesabın var mı?</h3>
 
-                        @using (Html.BeginForm("WriterLogin", "Login", FormMethod.Post))
+                        @using (Html.BeginForm("WriterLogin","Login", FormMethod.Post))
                         {
                             <div class="form-group">
                                 <input type="text" name="WriterMail" class="form-control" placeholder="Mail Adresin" required>
