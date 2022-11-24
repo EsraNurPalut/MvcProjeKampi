@@ -16,6 +16,7 @@ namespace MvcProjeKampi.Controllers
 
         HeadingManager hm = new HeadingManager(new EFHeadingDal());
         CategoryManager cm = new CategoryManager(new EFCategoryDal());
+        Context c = new Context();
 
         public ActionResult WriterProfile()
         {
@@ -24,9 +25,9 @@ namespace MvcProjeKampi.Controllers
 
         public ActionResult MyHeading( string p)
         {
-            Context c = new Context();
+            
             p = (string)Session["WriterMail"];
-            var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
+             var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
             var values = hm.GetListByWriter(writeridinfo);
             return View(values);
         }
@@ -48,7 +49,7 @@ namespace MvcProjeKampi.Controllers
         public ActionResult NewHeading(Heading p)
         {
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-            p.WriterID = 2;
+            p.WriterID = writeridinfo;
             p.HeadingStatus = true;
             hm.HeadingAdd(p);
             return RedirectToAction("MyHeading");
