@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BusinessLayer1.Concrete;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer1.Concrete;
 
@@ -21,10 +22,12 @@ namespace MvcProjeKampi.Controllers
             return View();
         }
 
-        public ActionResult MyHeading()
+        public ActionResult MyHeading( string p)
         {
-           
-            var values = hm.GetListByWriter();
+            Context c = new Context();
+            p = (string)Session["WriterMail"];
+            var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
+            var values = hm.GetListByWriter(writeridinfo);
             return View(values);
         }
 
