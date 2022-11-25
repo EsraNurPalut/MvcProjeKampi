@@ -16,6 +16,7 @@ namespace MvcProjeKampi.Controllers
         {
             return View();
         }
+
         [AllowAnonymous]
         public ActionResult Headings()
         {
