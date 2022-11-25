@@ -8,6 +8,8 @@ using DataAccessLayer.EntityFramework;
 
 namespace MvcProjeKampi.Controllers
 {
+
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
@@ -20,7 +22,6 @@ namespace MvcProjeKampi.Controllers
             return PartialView(contentlist);
         }
 
-        [AllowAnonymous]
         public ActionResult Headings()
         {
             var headinglist = hm.GetList();
