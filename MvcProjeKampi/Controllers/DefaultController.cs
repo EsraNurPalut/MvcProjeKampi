@@ -9,19 +9,24 @@ using DataAccessLayer.EntityFramework;
 namespace MvcProjeKampi.Controllers
 {
 
-    [AllowAnonymous]
+    
+
     public class DefaultController : Controller
     {
         // GET: Default
         HeadingManager hm = new HeadingManager(new EFHeadingDal());
 
         ContentManager cm = new ContentManager(new EfContentDal());
-        public PartialViewResult Index()
+
+        [AllowAnonymous]
+        public PartialViewResult Index(int id=0)
         {
-            var contentlist = cm.GetList();
+            var contentlist = cm.GetListByHeadingID(id);
             return PartialView(contentlist);
         }
 
+
+        [AllowAnonymous]
         public ActionResult Headings()
         {
             var headinglist = hm.GetList();
