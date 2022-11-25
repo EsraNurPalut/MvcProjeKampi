@@ -12,9 +12,12 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Default
         HeadingManager hm = new HeadingManager(new EFHeadingDal());
-        public ActionResult Index()
+
+        ContentManager cm = new ContentManager(new EfContentDal());
+        public PartialViewResult Index()
         {
-            return View();
+            var contentlist = cm.GetList();
+            return PartialView(contentlist);
         }
 
         [AllowAnonymous]
