@@ -19,7 +19,8 @@ namespace MvcProjeKampi.Controllers
         [AllowAnonymous]
         public ActionResult Headings()
         {
-            return View();
+            var headinglist = hm.GetList();
+            return View(headinglist);
         }
     }
 }
