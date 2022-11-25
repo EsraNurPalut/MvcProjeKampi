@@ -18,7 +18,6 @@ namespace MvcProjeKampi.Controllers
 
         ContentManager cm = new ContentManager(new EfContentDal());
 
-        [AllowAnonymous]
         public PartialViewResult Index(int id=0)
         {
             var contentlist = cm.GetListByHeadingID(id);
