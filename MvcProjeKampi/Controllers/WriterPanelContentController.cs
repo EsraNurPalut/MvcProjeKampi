@@ -26,9 +26,9 @@ namespace MvcProjeKampi.Controllers
         }
         [AllowAnonymous]
         [HttpGet]
-        public ActionResult AddContent(int id)
+        public ActionResult AddContent()
         {
-            ViewBag.d = id;
+            //ViewBag.d = id;
             return View();
         }
         [HttpPost]
@@ -44,6 +44,12 @@ namespace MvcProjeKampi.Controllers
 
             return RedirectToAction("MyContent");
         }
+        [AllowAnonymous]
+        public ActionResult ToDoList()
+        {
+            return View();
+        }
+
 
     }
 }
