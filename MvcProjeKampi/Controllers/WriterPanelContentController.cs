@@ -12,6 +12,8 @@ namespace MvcProjeKampi.Controllers
 {
     public class WriterPanelContentController : Controller
     {
+
+    
         // GET: WriterPanelContent
         ContentManager cm = new ContentManager(new EfContentDal());
         Context c = new Context();
@@ -22,10 +24,11 @@ namespace MvcProjeKampi.Controllers
             var contentvalues = cm.GetListByWriter(id);
             return View(contentvalues);
         }
-
+        [AllowAnonymous]
         [HttpGet]
-        public ActionResult AddContent()
+        public ActionResult AddContent(int id)
         {
+            ViewBag.d = id;
             return View();
         }
         [HttpPost]
