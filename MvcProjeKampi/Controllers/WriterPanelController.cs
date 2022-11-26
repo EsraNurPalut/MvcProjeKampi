@@ -7,6 +7,8 @@ using BusinessLayer1.Concrete;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer1.Concrete;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -91,15 +93,16 @@ namespace MvcProjeKampi.Controllers
             return RedirectToAction("MyHeading");
 
         }
-
+        [AllowAnonymous]
         public ActionResult AllHeading()
         {
-            var headings = hm.GetList();
+            var headings = hm.GetList().ToPagedList(1,4); //her sayfada kac tane veri olacagını yazdık.
             return View(headings);
         }
 
     }
 }
+
 
 //<customErrors mode="On">
          // < error statusCode = "404" redirect = "/ErorPage/Page404/" />
